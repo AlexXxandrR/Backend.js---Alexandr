@@ -18,3 +18,4 @@ switch (name) {
 }
 console.log(`Роль: ${name}
 Уровень доступа: ${level}`);
+console.log(level)

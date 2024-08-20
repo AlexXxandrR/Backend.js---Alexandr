@@ -1,16 +1,17 @@
 const arr = [0, -2, 3, -11, 21];
+let min = arr[0];
+let max = arr[0];
+let sum = 0;
 
-let Positive = 0;
-let Negative = 0;
+for (const num of arr) {
+    if(num < min) {
+        min = num;
+    }if(num > max) {
+        max = num;
+    }sum += num;
 
-for (let i = 0; i < arr.length -1; i++) {
-    if (arr[i] > 0) {
-        Positive++;
-    }else if (arr[i] < 0){
-        Negative++;
-    }
 }
-console.log(`Положительные числа: ${Positive}
-Отрийательные числа: ${Negative}
-`);
-
+const res = sum / arr.length;
+console.log(min);
+console.log(max);
+console.log(sum);

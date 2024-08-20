@@ -1,8 +1,6 @@
-for (let i = 0; i <= 1000; i++) {
-    let lastDigit = i % 10;
-    let firstDigit = parseInt(i.toString()[0]);
+let arr = [1, 9, 2, 3, 7 ,5];
 
-    if (firstDigit + lastDigit === 10) {
-        console.log(i);
-    }
+for (let i = 0; i < arr.length; i++) {
+    arr[i] = i;
 }
+console.log(arr);

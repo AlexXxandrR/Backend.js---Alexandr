@@ -1,7 +1,5 @@
-const person = { age: 10, name: 'Petr', adress: 'Moscow' };
+const person = { age: 10, name: '', child: 'Max' };
 
-for (const Key in person) {
-    if(Key.length % 2 === 0) {
-        console.log(Key)
-    }
+for (const personKey in person) {
+    console.log(personKey, person[personKey]);
 }

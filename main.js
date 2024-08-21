@@ -1,11 +1,7 @@
-const names1 = ['Ivan', 'Kovan', 0, 'D'];
-const names2 = ['Kovan', 'NeIvan', 1, 0, 'C'];
-
+const word = 'a car';
 const common = [];
 
-for (const element of names1) {
-    if(names2.includes(element)) {
-        common.push(element);
-    }
+for (const wordElement of word) {
+    common.push(wordElement);
 }
-console.log(common);
+console.log(common)

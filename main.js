@@ -1,17 +1,17 @@
-const arr = [0, -2, 3, -11, 21];
-let min = arr[0];
-let max = arr[0];
-let sum = 0;
+const name1 = ['Ivan', 'Kovan'];
+const name2 = ['Kovan', 'Ivan'];
+let flag = true;
 
-for (const num of arr) {
-    if(num < min) {
-        min = num;
-    }if(num > max) {
-        max = num;
-    }sum += num;
-
+for (const string1 of name1) {
+    if (!name2.includes(string1)) {
+        flag = false;
+        break;
+    }
 }
-const res = sum / arr.length;
-console.log(min);
-console.log(max);
-console.log(sum);
+for (const string2 of name2) {
+    if (!name1.includes(string2)) {
+        flag = false;
+        break;
+    }
+}
+console.log(flag);

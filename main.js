@@ -1,5 +1,8 @@
-const person = { age: 10, name: '', child: 'Max' };
+const person = { age: 10, name: '', credit: 100 };
 
-for (const personKey in person) {
-    console.log(personKey, person[personKey]);
+for (const Key in person) {
+    if(Number(person[Key])) {
+        person[Key] *=  1.2;
+    }
 }
+console.log(person)

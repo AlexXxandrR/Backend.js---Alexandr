@@ -1,8 +1,10 @@
-const person = { age: 10, name: '', credit: 100 };
-const common = [];
+const person = { age: 10, name: 'Petr', adress: 'Moscow' };
+const massive1 = [];
+const massive2 = [];
 
 for (const key in person) {
-    common.push(key);
+    massive1.push(key);
+    massive2.push(person[key]);
 }
-console.log(common.join(', '));
-
+console.log(massive1);
+console.log(massive2);

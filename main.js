@@ -1,7 +1,7 @@
-const word = 'a car';
-const common = [];
+const person = { age: 10, name: 'Petr', adress: 'Moscow' };
 
-for (const wordElement of word) {
-    common.push(wordElement);
+for (const Key in person) {
+    if(Key.length % 2 === 0) {
+        console.log(Key)
+    }
 }
-console.log(common)

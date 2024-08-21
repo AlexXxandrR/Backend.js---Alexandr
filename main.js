@@ -1,8 +1,7 @@
 const person = { age: 10, name: '', credit: 100 };
+const common = [];
 
-for (const Key in person) {
-    if(Number(person[Key])) {
-        person[Key] *=  1.2;
-    }
+for (const key in person) {
+    common.push(key);
 }
-console.log(person)
+console.log(common.join(', '));

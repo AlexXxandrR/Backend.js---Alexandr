@@ -5,3 +5,4 @@ for (const key in person) {
     common.push(key);
 }
 console.log(common.join(', '));
+

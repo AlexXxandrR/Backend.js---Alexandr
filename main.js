@@ -1,15 +1,13 @@
-const vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
+const matrix = [
+    ['Id', 'Title', 'Description'],
+    [1, 'Title-1', 'Description-1'],
+    [2, 'Title-2', 'Description-2'],
+    [3, 'Title-3', 'Description-3', 'Поле с багом'],
+    [4, 'Title-4', 'Description-4'],
+    [5, 'Title-5', 'Description-5'],
+    [6, 'Title-6', 'Description-6', 'Поле с багом'],
+];
 
-let countvowels = 0;
-let countnovowels = 0;
-
-for (const char of vowels) {
-    if(vowels.includes(char)) {
-        countvowels++;
-    }else {
-        countnovowels++;
-    }
+for (let i = 0; i < matrix.length; i++) {
+    console.log(matrix[i].join(' '));
 }
-
-console.log(countvowels);
-console.log(countnovowels);

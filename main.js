@@ -1,10 +1,15 @@
-const person = { age: 10, name: 'Petr', adress: 'Moscow' };
-const massive1 = [];
-const massive2 = [];
+const vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
 
-for (const key in person) {
-    massive1.push(key);
-    massive2.push(person[key]);
+let countvowels = 0;
+let countnovowels = 0;
+
+for (const char of vowels) {
+    if(vowels.includes(char)) {
+        countvowels++;
+    }else {
+        countnovowels++;
+    }
 }
-console.log(massive1);
-console.log(massive2);
+
+console.log(countvowels);
+console.log(countnovowels);

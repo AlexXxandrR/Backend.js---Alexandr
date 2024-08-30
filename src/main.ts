@@ -1,4 +1,17 @@
-const a: number = 10;
-console.log(a);
-const b = 'Rock is Hard';
-console.log(b);
+type FoodOrder = 'raw' | 'coocking' | 'coocked' | 'burned';
+
+type Order = {
+  name: string;
+  ingridients: string[];
+  servirings: number;
+  status: FoodOrder;
+};
+const order: Order = {
+    name: 'Spagetti';
+    ingridients: ['Cheese sous', 'Ketchup', 'mayonnaise', '' ];
+    servirings: 2;
+    status: "coocked";
+};
+order.status = "coocked";
+order.status = "coocking";
+order.status = "raw";

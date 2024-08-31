@@ -1,17 +1,14 @@
-type FoodOrder = 'raw' | 'coocking' | 'coocked' | 'burned';
+type Client = 1 | 2 | 3;
 
-type Order = {
+type registration = {
   name: string;
-  ingridients: string[];
-  servirings: number;
-  status: FoodOrder;
+  surname: string;
+  email: string;
+  client: Client;
 };
-const order: Order = {
-    name: 'Spagetti';
-    ingridients: ['Cheese sous', 'Ketchup', 'mayonnaise', '' ];
-    servirings: 2;
-    status: "coocked";
-};
-order.status = "coocked";
-order.status = "coocking";
-order.status = "raw";
+const user = {
+    name: 'jhonn';
+    surname: 'Terminatorovich';
+    email: 'jhonn@mail.ru';
+    client: 1;
+}

@@ -1,16 +1,27 @@
-type Client = 1 | 2 | 3;
-type FoodOrder = ['raw', 'cocking', 'coocked';
-
-type MealOrder = {
-  client: Client;
-  foodorder: FoodOrder;
-  dishName: string;
-  oedrDate: string;
+type UserProfile = {
+  name: string;
+  age: number;
+  surname?: string | null;
 };
-const order: MealOrder = {
-    client: 1;
-    foodorder: 'coocked';
-    dishName: 'Hot Stake';
-    orderDate: new Date().toISOString()
-}
-console.log(order)
+const user1: UserProfile = {
+  name: 'Ruslan',
+  age: 22,
+  surname: 'Semak',
+};
+const user2: UserProfile = {
+  name: 'Alexandr',
+  age: 40,
+  surname: null,
+};
+const user3: UserProfile = {
+  name: 'Vladimir',
+  age: 33,
+};
+const user4: UserProfile = {
+  name: 'Vladimir',
+  age: 33,
+  surname: '',
+};
+console.log(
+  `User4: ${user4.surname == null ? 'не обнаружено' : user4.surname === '' ? 'пусто' : user4.surname}`,
+);

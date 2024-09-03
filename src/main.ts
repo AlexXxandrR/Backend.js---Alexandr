@@ -22,6 +22,11 @@ const user4: UserProfile = {
   age: 33,
   surname: '',
 };
-console.log(
-  `User4: ${user4.surname == null ? 'не обнаружено' : user4.surname === '' ? 'пусто' : user4.surname}`,
-);
+
+const CheckSurname = (user: UserProfile) => {
+  console.log((user.surname ?? 'Не обнаружено') || 'Пусто');
+};
+CheckSurname(user1);
+CheckSurname(user2);
+CheckSurname(user3);
+CheckSurname(user4);

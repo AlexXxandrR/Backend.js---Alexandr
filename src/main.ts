@@ -1,7 +1,7 @@
 const fruits = (
   arr: string[],
   maxLength: number,
-  comparison: 'less' | 'greater',
+  comparison: 'less' | 'greater' = 'less',
 ): string[] | number => {
   const result = [];
 

@@ -1,17 +1,16 @@
-const split = (word: string) => {
-  const letters: string[] = [];
-  const digits: string[] = [];
+const fruits = (arr: string[], maxLength: number): string[] => {
+  const result = [];
 
-  for (const char of word) {
-    if (isNaN(Number(char))) {
-      letters.push(char);
-    } else {
-      digits.push(char);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length < maxLength) {
+      result.push(arr[i]);
     }
   }
 
-  return { letters, digits };
+  return result;
 };
 
-const result = split('abc123def456');
-console.log(result); // { letters: ['a', 'b', 'c', 'd', 'e', 'f'], digits: ['1', '2', '3', '4', '5', '6'] }
+// Пример использования:
+const strings = ['apple', 'banana', 'kiwi', 'plum'];
+const maxLen = 5;
+console.log(fruits(strings, maxLen));

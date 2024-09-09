@@ -1,16 +1,21 @@
-const fruits = (arr: string[], maxLength: number): string[] => {
+const fruits = (
+  arr: string[],
+  maxLength: number,
+  comparison: 'less' | 'greater',
+): string[] | number => {
   const result = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length < maxLength) {
-      result.push(arr[i]);
+  for (const str of arr) {
+    if (comparison === 'less' && str.length < maxLength) {
+      result.push(str);
+    } else if (comparison === 'greater' && str.length > maxLength) {
+      result.push(str);
     }
   }
 
   return result;
 };
 
-// Пример использования:
 const strings = ['apple', 'banana', 'kiwi', 'plum'];
 const maxLen = 5;
-console.log(fruits(strings, maxLen));
+console.log(fruits(strings, maxLen, 'greater'));

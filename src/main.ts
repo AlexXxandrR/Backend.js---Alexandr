@@ -1,21 +1,16 @@
-const fruits = (
-  arr: string[],
-  maxLength: number,
-  comparison: 'less' | 'greater' = 'less',
-): string[] | number => {
-  const result = [];
+const arrays = (arr: number[]) => {
+  for (let i = 0; i < arr.length; i++) {
+    const num = arr[i];
+    let max = 1;
 
-  for (const str of arr) {
-    if (comparison === 'less' && str.length < maxLength) {
-      result.push(str);
-    } else if (comparison === 'greater' && str.length > maxLength) {
-      result.push(str);
+    for (let j = 1; j < num; j++) {
+      if (num % j === 0) {
+        max = j;
+      }
     }
+
+    console.log(`Наибольший делитель для ${num} - ${max}`);
   }
-
-  return result;
 };
-
-const strings = ['apple', 'banana', 'kiwi', 'plum'];
-const maxLen = 5;
-console.log(fruits(strings, maxLen, 'greater'));
+const numbers: number[] = [1, 10, 11, 12, 21, 61, 85, 123];
+arrays(numbers);

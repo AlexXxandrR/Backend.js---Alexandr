@@ -6,6 +6,5 @@ const sumObjectValues = (obj: Record<string, number>): number => {
   return sum;
 };
 
-// Пример использования
 const obj = { a: 10, b: 20, c: 30 };
 console.log(sumObjectValues(obj));

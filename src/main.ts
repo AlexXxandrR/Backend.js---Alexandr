@@ -1,24 +1,25 @@
-const storage = [
-  'nick',
-  'nack',
-  'nock',
-  [
-    {
-      first: 'forecast',
-      child: null,
-    },
-    {
-      first: 'castfore',
-      child: null,
-    },
-    'zzz',
-  ],
-  'no-1',
-  'no-2',
-];
+const countTypes = (...args: any[]): Record<string, number> => {
+  return args.reduce((acc, arg) => {
+    let type;
 
-const [, , , [, b1, cos], ...nos] = storage;
+    if (arg === null) {
+      type = 'null';
+    } else {
+      type = typeof arg;
+    }
 
-console.log(nos); // [ 'no-1', 'no-2' ]
-console.log(cos); // [ 'zzz' ]
-console.log(b1); // { first: 'castfore', child: null }
+    if (acc[type]) {
+      acc[type] += 1;
+    } else {
+      acc[type] = 1;
+    }
+
+    return acc;
+  }, {});
+};
+
+const func = () => {};
+
+console.log(
+  countTypes(3, true, 'a', 1, {}, func, 4, [], undefined, false, 0, undefined, func, {}, ''),
+);
